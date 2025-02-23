@@ -1,13 +1,10 @@
-import React from "react";
-import { View, Text } from "react-native";
-
 import { useState } from 'react'
 
- 
+
 import axios from "axios";
 
 
-function HomeScreen() {
+function AiApp() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
@@ -37,5 +34,4 @@ function HomeScreen() {
   )
 }
 
-export default HomeScreen();
-
+export default AiApp;

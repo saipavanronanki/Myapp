@@ -1,11 +1,19 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import TabNavigator from "../app/tabs navigation";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import HomeScreen from "../app/screens/HomeScreen";
+import ProfileScreen from "../app/screens/ProfileScreen";
+import SettingsScreen from "../app/screens/SettingsScreen";
 
-export default function App() {
+const Tab = createBottomTabNavigator();
+
+const TabNavigator = () => {
   return (
-    <NavigationContainer>
-      <TabNavigator />
-    </NavigationContainer>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="Settings" component={SettingsScreen} />
+    </Tab.Navigator>
   );
-}
+};
+
+export default TabNavigator;
